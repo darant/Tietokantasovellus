@@ -63,7 +63,8 @@
 	   
     	<div id="example" class="boxed">
         	<!--<h2 class="title">Output window:</h2>-->
-        	<!--OUTPUT-->    	
+        	<!--OUTPUT-->  
+		    </table>	
    	    </div>
     	<!--end example-->
 	</div>

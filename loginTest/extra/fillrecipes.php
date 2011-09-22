@@ -1,7 +1,7 @@
 <?php
   $username = "dasha";
   $password = "Xth4PW9mZxFKqME8";
-  $database = "login";
+  $database = "Drinkkiarkisto";
   $socket = "/Applications/MAMP/tmp/mysql/mysql.sock";
   $address = "mysql:host=localhost;dbname=" . $database . ";unix_socket=" . $socket;
 
@@ -21,16 +21,18 @@
     die("Could not open file $cfile");
   }
   else { 
-  
+  /*
+
     try {
 		  $query = $connection->prepare("truncate table ingredients");
 		  $query->execute();
 		  echo "done!";
      } catch (Exception $e) {
 		  die("Exception during query execution "  . $e->getMessage());
-    }   
+    } 
+*/  
     
-    
+    $i=0;
     while (!feof($file)) {               
       $line = trim(fgets($file));      
       
@@ -39,7 +41,6 @@
         $id = trim($pieces[0]);     
         $value1 = trim($pieces[1]);
         $value2 = trim($pieces[2]); 
-        
         $data = "Insert into recipes(name, description) values(\"". $value1 . "\",\"". $value2. "\");";
 		        
         try {

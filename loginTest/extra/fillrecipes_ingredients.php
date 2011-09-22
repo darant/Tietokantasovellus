@@ -13,7 +13,7 @@
 
   $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
    
-  $myfile = '/Applications/MAMP/htdocs/loginTest/ingredients.txt'; //
+  $myfile = '/Applications/MAMP/htdocs/loginTest/recipes_ingredients.txt'; //
   $comment = "#";
   $counter = 0;
 
@@ -21,29 +21,27 @@
     die("Could not open file $cfile");
   }
   else { 
-    //cleaning table from all the previous data
-    /*
- try {
+  /*
+
+    try {
 		  $query = $connection->prepare("truncate table ingredients");
 		  $query->execute();
 		  echo "done!";
      } catch (Exception $e) {
 		  die("Exception during query execution "  . $e->getMessage());
-    }  
-*/    
+    } 
+*/  
     
-    
-    
+    $i=0;
     while (!feof($file)) {               
       $line = trim(fgets($file));      
       
       if ($line && !ereg("^$comment", $line)) { // exclude comments
         $pieces = explode(";", $line);  
-        $id = trim($pieces[0]);     
-        $value1 = trim($pieces[1]);
-        $value2 = trim($pieces[2]); 
-        
-        $data = "Insert into ingredients(name, description) values(\"". $value1 . "\",\"". $value2. "\");";
+       // $id = trim($pieces[0]);     
+        $value1 = trim($pieces[0]);
+        $value2 = trim($pieces[1]); 
+        $data = "Insert into recipes_ingredients(recipe_id, ingredient_id) values(\"". $value1 . "\",\"". $value2. "\");";
 		        
         try {
 		  $query = $connection->prepare($data);

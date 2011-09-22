@@ -19,9 +19,7 @@ class Page {
  	}
  	    
  	function generateHtml() {  
- 	    
- 	   
-    	  
+ 	     	  
  	    global $session;
  	    $form; $title;
  	    
@@ -40,7 +38,9 @@ class Page {
 		}
 	//	$content = $this->recipes_list();
 	    $content = $this->identifyLink();
-		
+	    
+	 //   global $generator;
+//		$content = $generator->recipes_table();
 		//Replacing corresponding things in html file and printing it.
 		$pageContents = str_replace ("<!--TITLE-->", $title, $pageContents);
 		$pageContents = str_replace ("<!--LOGIN-->", $form, $pageContents);
@@ -75,7 +75,7 @@ class Page {
     }
     
     function identifyLink() {
-    	$result;
+    	$result ="";
     	global $generator;
     	
     	if (isset($_GET['search'])){
@@ -112,11 +112,12 @@ class Page {
     	switch($search){ 
 
 			case 'name' : 
-			$result = $generator->all_recipes(); 
+			//$result = $generator->all_recipes(); 
+			$result = $generator->recipes_table(); 
     		break; 
 
 			case 'category' : 
-    		echo "search recipes by category"; 
+    		$result = $generator->all_categories();
     		break; 
     		
     		case 'alcohol' : 

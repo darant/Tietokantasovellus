@@ -10,7 +10,7 @@ class Database
   function Database(){  
     $username = "dasha";
     $password = "Xth4PW9mZxFKqME8";
-    $database = "login";
+    $database = "Drinkkiarkisto";
     $socket = "/Applications/MAMP/tmp/mysql/mysql.sock";
     $address = "mysql:host=localhost;dbname=" . $database . ";unix_socket=" . $socket;
     $table = "members";

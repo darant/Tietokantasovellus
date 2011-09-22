@@ -7,33 +7,7 @@ class Output {
     //var $database;
     
 	function Output() {
-	  // global $database;
-	 //  $output_str = $this->recipe_name();
-	 //  return $output_str;
 	}
-	
-	function members() {
-	    global $database;
-		return $database->query("SELECT * FROM members");
-	}
-	
-	function recipe_name($name) {
-		global $database;
-	    return $database->query("SELECT * FROM recipes WHERE name='$name'");
-	}
-	
-	function recipe_category() {}
-	
-	function recipe_alcohol() {}
-	
-	function recipe_ingredient() {}
-	
-	function ingredient_name($name) {
-		global $database;
-		return $database->query("SELECT * FROM ingredients WHERE name='$name'");
-	}
-	
-	function ingredient_type() {}
 	
 	function get_recipes() {
 		global $database;
@@ -45,10 +19,44 @@ class Output {
 		return $database->query("SELECT * FROM ingredients");
 	}
 	
-	function ingredients_in($name) {
+	function get_categories() {
 		global $database;
-		return $database->query("SELECT ingredients.name FROM ingredients, join1, recipes  WHERE recipe.name = '$name' AND recipes.id=join1.recipe_id AND ingredients_id=join1.ingredient_id");
+		return $database->query("SELECT * FROM categories");
 	}
+	
+	/*
+function members() {
+	    global $database;
+		return $database->query("SELECT * FROM members");
+	}
+*/
+	
+	function recipe_name($name) {
+		global $database;
+	    return $database->query("SELECT * FROM recipes WHERE name='$name'");
+	}
+	
+	function ingredient_name($name) {
+		global $database;
+		return $database->query("SELECT * FROM ingredients WHERE name='$name'");
+	}
+	
+	function recipe_ingredient($name) {
+		global $database;
+		return $database->query("SELECT ingredients.name FROM ingredients, recipes_ingredients, recipes  WHERE recipes.name = '$name' AND recipes.id=recipes_ingredients.recipe_id AND ingredients.id=recipes_ingredients.ingredient_id");
+	}
+	
+	function recipe_category() {}
+	
+	function recipe_alcohol() {}
+	
+	
+	
+	function ingredient_type() {}
+	
+	
+	
+	
 	
 	function toStr(){
 		return "asda";

@@ -1,0 +1,6 @@
+RECIPES:
+Create table recipes(id int auto_increment, name varchar(40) not null, description text, constraint recipes_pk primary key (id));
+
+Create table ingredients(id int auto_increment, name varchar(40) not null, description text, constraint ingredients_pk primary key (id));
+
+Create table users(id int auto_increment, access_level int not null, name varchar(15) not null, password varchar(15) not null, constraint users_pk primary key (id));

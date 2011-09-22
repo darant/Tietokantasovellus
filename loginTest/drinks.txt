@@ -1,0 +1,10 @@
+1;Americano;This cocktail with it's acquired taste was also the first cocktail ordered by James Bond in the first novel, Casino Royale.;
+2;Bloody Mary;The drink \"Bloody Mary\", which contains blood red tomato juice, is associated with a number of historical figures, particularly Queen Mary Tudor, and fictional women from folklore. They were reputed to have not only drunk but bathed in the blood of young virgin girls in order to retain their youth.;
+3;Daiquiri;Daiquiri a the name of a sunny beach in Cuba. The basic recipe for a Daiquiri is similar to the grog British sailors drank aboard ship from the 1740s onwards.;
+4;Irish Coffee;The date that the Irish discovered America is lost in the mists of time, but the date that America discovered Irish coffee is clear as clear: It happened in San Francisco, Nov. 10, 1952.;
+5;Manhatten;A Manhattan cocktail is almost pure whiskey. The cocktail has been referenced prominently in numerous films and television shows, such as The Simpsons.;
+6;Margarita;This frozen, fruit-flavored delight is a favorite drink from south of the border in US, they are perfect for a warm summer day.
+7;Negroni;This drink is said to be created by Italian Count Camillo Negroni, whose request for an Americano with gin led to the creation of a brand new pre-dinner drink;
+8;Pina Colada;Sweet, rum-based cocktail made cream of coconut and pineapple juice is usually served either blended with ice. It became widely known after Rupert Holmes released his song \"Escape\", better known as \"The Pina Colada Song\".;
+9;Vodka Martini;Vodka Martini, shaken not stirred! Vodka, dry vermouth, and ice are combined in a shaker and served in a chilled cocktail glass.;
+10;White Russian;This famous drink is not Russian in origin, but is named so due to vodka being the primary ingredient.;

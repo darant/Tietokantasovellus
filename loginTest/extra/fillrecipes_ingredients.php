@@ -40,8 +40,9 @@
         $pieces = explode(";", $line);  
        // $id = trim($pieces[0]);     
         $value1 = trim($pieces[0]);
-        $value2 = trim($pieces[1]); 
-        $data = "Insert into recipes_ingredients(recipe_id, ingredient_id) values(\"". $value1 . "\",\"". $value2. "\");";
+        $value2 = trim($pieces[1]);
+        $value3 = trim($pieces[2]); 
+        $data = "Insert into recipes_ingredients(recipe_id, ingredient_id, amount_id) values(\"". $value1 . "\",\"". $value2. "\",\"". $value3. "\");";
 		        
         try {
 		  $query = $connection->prepare($data);

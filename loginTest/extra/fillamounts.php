@@ -13,7 +13,7 @@
 
   $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
    
-  $myfile = '/Applications/MAMP/htdocs/loginTest/amounts.txt'; //
+  $myfile = '/Applications/MAMP/htdocs/loginTest/ingredients.txt'; //
   $comment = "#";
   $counter = 0;
 
@@ -39,11 +39,11 @@
       
       if ($line && !ereg("^$comment", $line)) { // exclude comments
         $pieces = explode(";", $line);  
-       // $id = trim($pieces[0]);     
+        $id = trim($pieces[0]);     
         $value1 = trim($pieces[1]);
-      //  $value2 = trim($pieces[2]); 
+        $value2 = trim($pieces[2]); 
         
-        $data = "Insert into amounts(name) values(\"". $value1 . "\");";
+        $data = "Insert into ingredients(name, description) values(\"". $value1 . "\",\"". $value2. "\");";
 		        
         try {
 		  $query = $connection->prepare($data);

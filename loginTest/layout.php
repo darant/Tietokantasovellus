@@ -24,41 +24,48 @@
 			<div class="content">
 			
 			<dl>
-			<dt><strong>Drinks:</strong></dt>
+			<dt><a href="page.php?menu=name"><strong>Drinks:</strong></a></dt>
 			<dd>
 				<ul>
-				<li><a href="?search=name">by name</a></li>
-				<li><a href="?search=category" name="recipe_cat">by category</a></li>
-				<li><a href="?search=alcohol">by alcohol</a></li>
-				<li><a href="?search=ingredient">by ingredient</a></li>
+				<li><a href="page.php?menu=name2">by name</a></li>
+				<li><a href="page.php?menu=category" name="recipe_cat">by category</a></li>
+				<!--<li><a href="page.php?menu=alcohol">by alcohol</a></li>-->
+				<li><a href="page.php?menu=ingredient">by ingredient</a></li>
 				</ul>
 			</dd>
 
-			<dt><strong>Ingredients:</strong></dt>
+			<dt><a href="page.php?menu=i_name"><strong>Ingredients:</strong></a></dt>
 			<dd>
 				<ul>
-				<li><a href="?search=i_name">by name</a></li>
-				<li><a href="?search=i_type">by type</a></li>
+				<li><a href="page.php?menu=i_name">by name</a></li>
+				<!--<li><a href="page.php?menu=i_type">by type</a></li>-->
 				</ul>
 			</dd>
+
+			<dt><strong><a href="page.php?random_recipe" action="">Random</a></strong></dt>
+
 			</dl>
 			
+			</div>
+			
+			<div id="search" class="boxed">
+				
+				<form name="form" action="search.php" method="get">
+				<input type="text" name="a" />
+				<input type="submit" name="search" value="Search" />
+				</form>
 			</div>
 			<!--end content-->
 		</div>
 		<!--end menu-->
 	</div>
 	<!--end sidebar-->
-	 <div id="menubar">
-	                <img src="images/Cuba-Libre-icon.png" alt="some_text"/>
-	                <a href="">Profile</a>
-	                <img src="images/Sex-on-the-beach-icon.png" alt="some_text"/>
-					<a href="">Recipes</a>
-					<img src="images/Banana-Daiquiri-icon.png" alt="some_text"/>
-					<a href="">Suggestion</a>
-					<img src="images/Vodka-Martini-icon.png" alt="some_text"/>
-					<a href="">Contact</a></ul>	
+	 <div id="menubar" class="boxed">
+
+			<!--MENUBAR-->
+			
 	</div>
+	
 	<div id="main" class="boxed">
 	   
     	<div id="example" class="boxed">
@@ -73,7 +80,9 @@
 <!--end all content-->
 
 <div id="footer">
-	<p>2011 Tietokantasovellus</a>.</p>
+	<p>2011 Tietokantasovellus.
+	<br>Recipes: <a href="http://www.iba-world.com/english/cocktails/">IBA Official Cocktails</a>
+	<br>Cocktail icons licensed from <a href="http://cedarseed-fire.blogspot.com/">Cedarseed.com</p></a>
 </div>
 </body>
 </html>

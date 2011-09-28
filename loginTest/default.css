@@ -193,13 +193,13 @@ color: #8e98da;
 
 #example {
 	
-	padding-left: 15px;
+	padding-left: 50px;
 	
 	padding-bottom: 15px;
 	
-	padding-right: 15px;
+	padding-right: 30px;
 	
-	padding-top: 20px;
+	padding-top: 30px;
 	
 	border-width: 0px;
 	
@@ -217,9 +217,7 @@ color: #8e98da;
 	
 	background-repeat: repeat-x;
 	
-	min-height: 470px;
-	
-	height: 100%;
+	min-height: 1000px;
 	
 	width: auto;
 	
@@ -243,10 +241,19 @@ color: #8e98da;
 	color: #bebdbf;
 	font-size: xx-large;
 }#example h2 {
+	padding-bottom: 0px;
 	text-align: left;
 	float: none;
 	color: #333035;
-	font-size: 24px;
+	font-size: 20px;
+}
+
+#example h3 {
+	padding-bottom: 0px;
+	text-align: left;
+	float: none;
+	color: #333035;
+	font-size: 17px;
 }
 
 #menu {
@@ -267,6 +274,10 @@ color: #8e98da;
 	color: #cacdcf;
 	text-decoration: none;
 }
+
+#menu a:hover { 
+color: #ebeeeb; 
+} 
 
 #menu ul {
 	/* list-style- 2px 0px #ff5d466-align: l 2px 2px 1px #fff3f5gin: 0;
@@ -316,14 +327,21 @@ color: #8e98da;
 	list-style: disc;
 }
 
+
+
 #footer {
-	margin-top: 0px;
+	color: #1f1f1f;
+	margin-bottom: 20px;
+	clear: both;
+	padding-left: 0;
+	padding-bottom: 10px;
+	padding-right: 0;
+	padding-top: 20px;
+	margin-top: 20px;
 	margin-left: auto;
 	margin-right: auto;
 	background-position: 0 bottom;
-	clear: both;
 	width: 1100px;
-	padding: 10px 0;
 	border-top: 1px dotted #FFFFFF;
 }
 
@@ -364,7 +382,7 @@ color: #8e98da;
 	padding-bottom: 10px;
 	float: left;
 	margin-left: -10px;
-	margin-top: 75px;
+	margin-top: 98px;
 }
 
 #main {
@@ -407,7 +425,10 @@ color: #8e98da;
 	max-height: 40px;
 }
 
-#menubar a {
+ssss {
+	padding-right: 5px;
+	margin-left: -10px;
+	padding-left: 10px;
 	text-align: right;
 	word-spacing: 5px;
 	margin-bottom: 0px;
@@ -419,15 +440,40 @@ color: #8e98da;
 element {
 }
 
+#menubar1 {
+	
+	padding-left: 15px;
+	
+	padding-bottom: 15px;
+	
+	padding-right: 15px;
+	
+	padding-top: 10px;
+	
+	border-width: 0px;
+	
+	border-right-style: inset;
+	
+	border-left-style: inset;
+	
+	border-bottom-style: inset;
+	
+	border-top-style: inset;
+	
+	opacity: 1.5;
+	
+	width: 200px;
+	
+}
+
 #logo h1 {
 	color: white;
 }
 
 #menubar {
-	margin-right: 0px;
+	margin-top: 60px;
+	margin-right: 50px;
 	padding-right: 0px;
-	padding-left: 0px;
-	margin-top: 40px;
 }
 
 #logo h2 {
@@ -435,11 +481,23 @@ element {
 }
 
 #menubar img {
-	margin-left: -5px;
-	margin-top: -20px;
+	margin-left: -25px;
+	padding-left: 20px;
+	margin-right: 0px;
+	padding-right: 0px;
+	margin-top: -30px;
 	text-overflow: ellipsis;
 }
 
 #example table {
+}
+
+#search {
+	font-size: 16px;
+	color: #2b2929;
+	float: left;
+	margin-top: 20px;
+	margin-right: 40px;
+	padding-right: 0px;
 }
 

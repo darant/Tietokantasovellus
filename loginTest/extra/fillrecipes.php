@@ -38,10 +38,14 @@
       
       if ($line && !ereg("^$comment", $line)) { // exclude comments
         $pieces = explode(";", $line);  
-        $id = trim($pieces[0]);     
+        $cat = trim($pieces[0]); 
+        echo $cat . " ";
         $value1 = trim($pieces[1]);
-        $value2 = trim($pieces[2]); 
-        $data = "Insert into recipes(name, description) values(\"". $value1 . "\",\"". $value2. "\");";
+        echo $value1 . " ";    
+        $value2 = trim($pieces[2]);
+        echo $value2 . " <br>";
+        //$value3 = trim($pieces[3]); 
+        $data = "Insert into recipes(category_id, name, description) values(\"". $cat . "\",\"". $value1. "\",\"". $value2. "\");";
 		        
         try {
 		  $query = $connection->prepare($data);

@@ -1,11 +1,13 @@
 RECIPES:
-Create table recipes(id int auto_increment, name varchar(40) not null, description text, constraint recipes_pk primary key (id));
+Create table recipes(id int auto_increment, category_id int, name varchar(40) not null, description text, constraint recipes_pk primary key (id), constraint foreign key (category_id) references categories(id));
 
 Create table ingredients(id int auto_increment, name varchar(40) not null, description text, constraint ingredients_pk primary key (id));
 
 Create table users(id int auto_increment, access_level int not null, name varchar(15) not null, password varchar(15) not null, constraint users_pk primary key (id));
 
-Create table recipes_ingredients(recipe_id int not null, ingredient_id int not null, constraint foreign key (recipe_id) references recipes(id), constraint foreign key (ingredient_id) references ingredients(id));
+Create table recipes_ingredients(recipe_id int not null, ingredient_id int not null, amount_id int not null, constraint foreign key (recipe_id) references recipes(id), constraint foreign key (ingredient_id) references ingredients(id), constraint foreign key (amount_id) references amounts(id))
+
+Create table amounts(id int auto_increment, name varchar(40) not null, constraint amounts_pk primary key (id));
 
 Create table categories(id int auto_increment, name varchar(50) not null, constraint categories_pk primary key (id));
 
@@ -13,3 +15,7 @@ Insert into categories(name) values ("Pre-dinner Cocktail");
 Insert into categories(name) values ("After-Dinner");
 Insert into categories(name) values ("Long Drink Style");
 Insert into categories(name) values ("Popular Cocktails");
+
+Create table suggestions(id int auto_increment, name varchar(50) not null, ing1 varchar(50) not null, ing2 varchar(50) not null, ing3 varchar(50), ing4 varchar(50), ing5 varchar(50), ing6 varchar(50), category varchar(50), constraint suggestions_pk primary key (id)); 
+
+create table recipes_keywords(id int not null, keyword varchar(100) not null, constraint foreign key (id) references recipes(id));

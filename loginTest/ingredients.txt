@@ -1,8 +1,8 @@
-;Amaretto liqueur;;
-;Angostura Bitter;;
-;Apricot Brandy;;
-;Apple Schnapps;;
-;Bacardi Rum White;;
+;Amaretto liqueur;Italian sweet almond-flavoured liqueur. It is made from a base of apricot or almond pits, sometimes both. Amaretto is quite popular in Europe. It is mostly used in cocktails but also server a variety of other culinary uses: flavoring Tiramisu, ice cream, pancakes or almodine sauce.;
+;Angostura Bitter;Concentrated bitter made of water, 44.7% alcohol, gentian root, and vegetable flavoring extracts by House of Angostura in Trinidad and Tobago. Typically used for flavoring beverages, or (less often) food. The recipe was developed in 1824 as a tonic by German Dr. Johann Gottlieb Benjamin Siegert, a Surgeon General in Simon Bolivar's army in Venezuela.;
+;Apricot Brandy;Apricot brandy is a liquor distilled from fermented apricot juice or a liqueur made from apricot flesh and kernels. Apricots lend this liquor a very distinctive flavor, and a rich amber to orange color;
+;Apple Schnapps;Schnaps is clear, colorless, and has a light fruit flavor. It is distilled from fermented fruit must, is bottled with no added sugar, and normally contains about 40%;
+;Bacardi Rum White;Bacardi white rum descends from the original Bacardi rum established by Don Facundo Bacardi y Maso in 1862, and is largest selling brand of rum worldwide. It is a colorless, clear, light-bodied rum. It is double filtered through charcoal with a one year aging process between filters.;
 ;Bailey's Irish Cream;;
 ;Banana;;
 ;Bourbon whiskey;;
@@ -69,3 +69,6 @@
 ;Vodka;;
 ;Vodka Citron;;
 ;White Rum;;
+;Ice Cream;;
+;Brown Sugar;;
+;Midori;;

@@ -30,35 +30,46 @@ class Database
    *Returns 0 if user is not found, else returns user level (1 to 3).
    */
   function identifyUser($username, $password){
-    try {
-       $query = $this->connection->prepare("SELECT * FROM users WHERE username='$username' AND password='$password'");
-       $query->execute();
-    } catch (Exception $e) {
-       die("Exception during query execution "  . $e->getMessage());
-    }
-   //HERE NEED TO PREVENT SOMEHOW DASHA != dasha
-    $user = $query->fetch();
+  	 try {
+        $query = $this->connection->prepare("SELECT * FROM users WHERE name='$username' AND password='$password'");
+        $query->execute();
+     } catch (Exception $e) {
+        die("Exception during query execution "  . $e->getMessage());
+     }
+     //HERE NEED TO PREVENT DASHA != dasha
+     $user = $query->fetch();
    
-    //Starting session if user with this name and password is found.
-    if($user==null) {
+     //Starting session if user with this name and password is found.
+     if($user==null) {
 		return 0;
-	} else {
+	 } else {
 		return $user[1];
-    }
+     }
 
    }  
+   
+   function containsUser($username) {
+   	   $user = $this->query("Select * from users where name='$username'");	
+   	   $user = $user->fetch();
+       if($user==null) {
+           return 0;
+       } else {
+       	   return 1;
+       }	
+   } 
+   
    /**
    *  Ths method executes the given $query in the database and returns it.
    */
    function query($query){
-        try {
-      		$query = $this->connection->prepare($query);
-      		$query->execute();
-        } catch (Exception $e) {
-        
-        	die("Exception during query execution "  . $e->getMessage());
-        }
-        return $query;
+   	
+	   try {
+		   $query = $this->connection->prepare($query);
+	       $query->execute();
+	   } catch (Exception $e) {
+	        die("Exception during query execution "  . $e->getMessage());
+	   }
+	   return $query;
    }
 };
 

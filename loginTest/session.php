@@ -96,6 +96,23 @@ class Session
       $this->logged_in = false;
    }
    
+   function register($username, $password) {
+   	  global $database;
+   	  
+   	  //usernames are only lowercase
+   	  $username = strtolower($username);
+   	  $password = md5($password);
+   	  
+   	  if($database->containsUser($username)) {
+   	  	 echo "We're sorry, but this username is already taken!";
+   	  } else {
+   		 echo "Username is created. Welcome!";
+   		 echo "<br><a href='page.php'>Back to Main Page</a>";	
+   		 $database->query("Insert into users(access_level, name, password) values ('1','$username' , '$password')");    
+   	  }
+   }
+   
+   
    function getUsr() {
        return $this->username;
    }
